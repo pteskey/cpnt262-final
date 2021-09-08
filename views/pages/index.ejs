@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>    
+    <section class="hero">
+      <header>      
+        <%- include('../partials/header') %>
+      </header>
+
+      <video src="images/hero-vid.mp4" muted loop autoplay></video>  
+      <div class="overlay"></div>
+
+      <div class="text">
+        <h2>Eating Food</h2>
+        <h3>Is Fun To Do Together</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quis sint fugiat asperiores esse harum
+          consequuntur quisquam. Molestiae non, eveniet, amet laboriosam deserunt asperiores rerum expedita consequuntur
+          sed quam similique?
+        </p>
+        <a href="/menu">See Our Menu</a>
+      </div>
+  
+      <ul class="socials">
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="images/facebook.png" alt=""></a></li>
+        <li><a href="https://twitter.com/?lang=en" target="_blank" rel="noopener noreferrer"><img src="images/twitter.png" alt=""></a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="images/instagram.png" alt=""></a></li>
+      </ul>
+      <%- include('../partials/footer') %>
+    </section>  
+    
+    <script>
+      function initFreshChat() {
+        window.fcWidget.init({
+          token: "cb00b63c-b92e-4abe-8b67-1cf80a1d9476",
+          host: "https://wchat.freshchat.com"
+        });
+      }
+      function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "cpnt262-final",
+  "version": "0.1.0",
+  "description": "Final group project for CPNT262",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pteskey/cpnt262-final.git"
+  },
+  "author": "Patrick Teskey, Michael Allison, Swapna Sama & Bruk Gebremariam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pteskey/cpnt262-final/issues"
+  },
+  "homepage": "https://github.com/pteskey/cpnt262-final#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "modules": "^0.4.0",
+    "mongoose": "^5.12.2",
+    "socket.io": "^4.0.0"
+  }
+}

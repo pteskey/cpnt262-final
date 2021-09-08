@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <header>
+  <%- include('../partials/header') %>
+  </header>
+  
+  <Main>
+    <section class="team-wrapper">
+
+    </section>
+  </Main>
+   <!-- Template for Dynamic Team page -->
+   <template id="team-template">
+    <article class="team-cards">
+      <span class="name"></span>
+      <img src="" alt=""/>
+      <span class="title"></span>
+      <p class="bio"></p>
+    </article>
+  </template>
+  <!-- Footer Partial-->
+  <%- include('../partials/footer') %>
+  <script>
+    function initFreshChat() {
+      window.fcWidget.init({
+        token: "cb00b63c-b92e-4abe-8b67-1cf80a1d9476",
+        host: "https://wchat.freshchat.com"
+      });
+    }
+    function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+  </script>
+</body>
+
+</html>

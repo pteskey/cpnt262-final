@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <header>
+  <%- include('../partials/header') %>
+  </header>
+
+  <Main class="sub-container">
+    <% for(let i = 0; i < sub.length; i++) {%> 
+    <div class="subscriber">
+      <p><strong>Name:</strong> <%= sub[i].name %></p>
+      <p><strong>Email:</strong> <%= sub[i].email %></p>
+      <p><strong>Address:</strong> <%= sub[i].address %></p>
+      <p><strong>City:</strong> <%= sub[i].city %></p>
+      <p><strong>Province:</strong> <%= sub[i].province %></p>
+      <p><strong>Postal Code:</strong> <%= sub[i].postalcode %></p>
+      <p><strong>Note:</strong> <%= sub[i].note %></p>
+    </div>
+    <% } %> 
+  </Main>
+
+  <!-- Footer Partial-->
+  <%- include('../partials/footer') %>
+</body>
+
+</html>

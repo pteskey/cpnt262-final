@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head') %>
+</head>
+
+<body>
+  <header class="sub-header">
+  <%- include('../partials/header') %>
+  </header>
+  <main class="regFormBG">
+    <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="/admin" method="POST">
+      <fieldset id="fs-frm-inputs">
+        <label for="full-name">Full Name</label>
+        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+        <label for="email-address">Email Address</label>
+        <input type="email" name="email" id="email-address" placeholder="email@domain.tld" required="">
+        <label for="street-address">Street Address</label>
+        <input type="text" name="address" id="street-address" placeholder="Street" required="">
+        <fieldset class="locale">
+          <legend>Locale</legend>
+          <input class="med" type="text" name="city" placeholder="City" required="">
+          <select class="short button-like" name="province" required="">
+            <option value="Select" selected="" disabled="">Province</option>
+            <option value="AB">Alberta</option>
+            <option value=""></option>
+          </select>
+          <input class="short" type="text" name="postalcode" placeholder="postal-code" required="">
+        </fieldset>
+        <label for="note">Note</label><br>
+        <textarea class="comm" rows="2" name="note" id="note" placeholder="Include any additional information such as allergies"></textarea>        
+      </fieldset>
+      <input class="regButton" type="submit" value="Subscribe">
+    </form>
+   
+  </main>
+
+   <!-- Footer Partial-->
+  <%- include('../partials/footer') %>
+  <script>
+    function initFreshChat() {
+      window.fcWidget.init({
+        token: "cb00b63c-b92e-4abe-8b67-1cf80a1d9476",
+        host: "https://wchat.freshchat.com"
+      });
+    }
+    function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+  </script>
+</body>
+
+</html>
